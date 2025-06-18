@@ -16,11 +16,12 @@ def triangularNumber(divisorCount):
 
 
 
-# in this function we will figure out how many divisors a number has. We will return the count
+# in this function we will figure out how many divisors a number has. We will return the count. 
 def getDivisors(triangleNum):
     divisors = set()
     divisors.add(1)
     divisors.add(triangleNum)
+    # The largest possible factor will be the square root, so we use that. We use the floor method to make sure if it's not a perfect square we get the greatest integer less than or equal to the value
     for i in range (2, math.floor(math.sqrt(triangleNum) + 1)):
         if(i**2 == triangleNum):
             divisors.add(i)
